@@ -39,9 +39,9 @@ def downloadSourceToString(url):
 	return rtvsloHtml.text
 	
 def login(username, password):
-	url = 'http://www.rtvslo.si/prijava'
-	referurl = 'http://www.rtvslo.si/ttx'
-	payload = {'action':'login', 'pass':password, 'referer':referurl, 'submit':'Prijava', 'user':username}
+	url = 'https://moj.rtvslo.si/prijava'
+	referurl = 'https://www.rtvslo.si/ttx'
+	payload = {'action':'login', 'pass':password, 'referer':referurl, 'submit':'Submit', 'user':username}
 
 	s = requests.Session()
 	s.post(url, data=payload)
